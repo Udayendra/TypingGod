@@ -140,10 +140,10 @@ const TypingPractice = () => {
     if (container && blinker) {
       const { offsetTop, offsetHeight } = blinker;
       // Check if cursor is near the bottom of the visible container
-      if (offsetTop + offsetHeight > container.scrollTop + container.clientHeight - 5) {
+      if (offsetTop + offsetHeight > container.scrollTop + container.clientHeight - 10) {
         container.scrollBy({
           // top: offsetTop - container.clientHeight + 100, // Scroll smoothly
-          top: offsetHeight + 5, // Scroll smoothly
+          top: offsetHeight + 10, // Scroll smoothly
           behavior: "smooth",
         });
       }

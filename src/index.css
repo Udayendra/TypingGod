@@ -33,7 +33,7 @@ body {
 }
 
 .wrongSpace{
-  @apply bg-redcolor/50 px-1;
+  @apply bg-redcolor/50 px-1 py-1;
 }
 
 .blinker {
