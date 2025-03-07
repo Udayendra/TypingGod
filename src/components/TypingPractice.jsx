@@ -93,6 +93,7 @@ const TypingPractice = () => {
     setSpeed(0);
     setResult(false);
     handleTimeSelect(selectedTime);
+    setIsRunning(false);
     textSpanRef.forEach((wordRef) => {
       if (wordRef.current) {
         wordRef.current.childNodes.forEach((charRef) => {
