@@ -134,21 +134,19 @@ const TypingPractice = () => {
   }, [result]);
 
   useEffect(() => {
-    const container = textContainerRef.current; // Your text container
-    const blinker = document.querySelector(".blinker"); // The active cursor
+    const container = textContainerRef.current;
+    const blinker = document.querySelector(".blinker");
   
     if (container && blinker) {
       const { offsetTop, offsetHeight } = blinker;
-      // Check if cursor is near the bottom of the visible container
       if (offsetTop + offsetHeight > container.scrollTop + container.clientHeight - 10) {
         container.scrollBy({
-          // top: offsetTop - container.clientHeight + 100, // Scroll smoothly
-          top: offsetHeight + 10, // Scroll smoothly
+          top: offsetHeight + 10,
           behavior: "smooth",
         });
       }
     }
-  }, [currCharIndex]); // Runs whenever the cursor moves
+  }, [currCharIndex]); 
   
 
   // userinput handle
@@ -179,9 +177,9 @@ const TypingPractice = () => {
         const prevCharElement = allCurrChar[currCharIndex - 1];
 
         if (prevCharElement.classList.contains("text-textcolor")) {
-          setCorrectChars((prev) => Math.max(prev - 1, 0)); // If it was correct, decrement correctChars
+          setCorrectChars((prev) => Math.max(prev - 1, 0));
         } else if (prevCharElement.classList.contains("text-redcolor")) {
-          setErrors((prev) => Math.max(prev - 1, 0)); // If it was incorrect, decrement errors
+          setErrors((prev) => Math.max(prev - 1, 0)); 
         }
 
         setCurrCharIndex((prevIndex) => prevIndex - 1);
@@ -212,7 +210,7 @@ const TypingPractice = () => {
     }
 
     if (!isRunning) {
-      startTimer(selectedTime); //start timer
+      startTimer(selectedTime);
     }
 
     if (allCurrChar.length - 1 === currCharIndex) {
@@ -289,7 +287,6 @@ const TypingPractice = () => {
         <div className="flex justify-between mx-auto pb-5 w-full">
           <div className="text-[2rem] font-inter text-textcolor">
             {formateTime(timeLeft)}
-            {/* <span className="text-[1.125rem]">s</span>{" "} */}
           </div>
           <div className="flex space-x-3 items-center justify-center">
             <div className="flex space-x-2 px-2 border border-textcolor/20 rounded relative">
