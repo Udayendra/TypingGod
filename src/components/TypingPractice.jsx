@@ -257,7 +257,7 @@ const TypingPractice = () => {
     if (e.shiftKey) {
       if (char == inputChar.toUpperCase()) {
         setCorrectChars((prev) => prev + 1);
-        allCurrChar[currCharIndex].className = "text-textcolor";
+        allCurrChar[currCharIndex].className = "text-textcolor px-[2px] py-1";
       } else {
         setErrors((prev) => prev + 1);
         allCurrChar[currCharIndex].className = "text-redcolor py-1 px-[2px]";
@@ -265,7 +265,7 @@ const TypingPractice = () => {
     } else {
       if (char == inputChar.toLowerCase()) {
         setCorrectChars((prev) => prev + 1);
-        allCurrChar[currCharIndex].className = "text-textcolor";
+        allCurrChar[currCharIndex].className = "text-textcolor px-[2px] py-1";
       } else {
         setErrors((prev) => prev + 1);
         allCurrChar[currCharIndex].className = "text-redcolor py-1 px-[2px]";
